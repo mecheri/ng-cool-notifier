@@ -30,4 +30,8 @@ export class AppComponent {
   warn() {
     this.service.warn('test', 'test');
   }
+
+  bare() {
+    this.service.bare('test', 'test');
+  }
 }

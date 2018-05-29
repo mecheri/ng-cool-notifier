@@ -1,79 +1,147 @@
-#notifr {
-    visibility: hidden;
-    /* Hidden by default. Visible on click */
-    min-width: 250px;
-    /* Set a default minimum width */
-    margin-left: -125px;
-    /* Divide value of min-width by 2 */
-    background-color: #333;
-    /* Black background color */
-    color: #fff;
-    /* White text color */
-    text-align: center;
-    /* Centered text */
-    border-radius: 2px;
-    /* Rounded borders */
-    padding: 16px;
-    /* Padding */
+.cool-notification-wrapper {
     position: fixed;
-    /* Sit on top of the screen */
-    z-index: 1;
-    /* Add a z-index if needed */
+    width: 300px;
+    z-index: 1000;
+}
+
+.cool-notification-wrapper.left {
+    left: 20px;
+}
+
+.cool-notification-wrapper.top {
+    top: 20px;
+}
+
+.cool-notification-wrapper.right {
+    right: 20px;
+}
+
+.cool-notification-wrapper.bottom {
+    bottom: 20px;
+}
+
+.cool-notification-wrapper.center {
     left: 50%;
-    /* Center the notifr */
-    bottom: 30px;
-    /* 30px from the bottom */
+    transform: translateX(-50%);
 }
 
-#notifr.error {
-    visibility: visible;
-    /* Show the notifr */
-    /* Add animation: Take 0.5 seconds to fade in and out the notifr. 
-However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+.cool-notification-wrapper.middle {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-@-webkit-keyframes fadein {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-    to {
-        bottom: 30px;
-        opacity: 1;
+.cool-notification-wrapper.middle.center {
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 340px) {
+    .cool-notification-wrapper {
+        width: auto;
+        left: 20px;
+        right: 20px;
     }
 }
 
-@keyframes fadein {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-    to {
-        bottom: 30px;
-        opacity: 1;
-    }
+.cool-notification {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+    min-height: 70px;
 }
 
-@-webkit-keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
-    }
-    to {
-        bottom: 0;
-        opacity: 0;
-    }
+.cool-notification .cool-title,
+.cool-notification .cool-content,
+.cool-notification .cool-html {
+    margin: 0;
 }
 
-@keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
-    }
-    to {
-        bottom: 0;
-        opacity: 0;
-    }
+.cool-notification .cool-title {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.cool-notification .cool-content {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cool-notification.has-icon .cool-title,
+.cool-notification.has-icon .cool-content,
+.cool-notification.has-icon .cool-html {
+    padding: 0 50px 0 0;
+}
+
+.cool-notification .icon {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.cool-notification .icon.icon-hover:hover {
+    opacity: 0.5;
+}
+
+.cool-notification .icon svg {
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.cool-notification .icon svg g {
+    fill: #fff;
+}
+
+.cool-notification.rtl-mode.has-icon .cool-title,
+.cool-notification.rtl-mode.has-icon .cool-content,
+.cool-notification.rtl-mode.has-icon .cool-html {
+    padding: 0 0 0 50px;
+}
+
+.cool-notification.rtl-mode {
+    direction: rtl;
+}
+
+.cool-notification.rtl-mode .cool-content {
+    padding: 0 0 0 50px;
+}
+
+.cool-notification.rtl-mode svg {
+    left: 0;
+    right: auto;
+}
+
+.cool-notification.error {
+    background: #F44336;
+}
+
+.cool-notification.success {
+    background: #8BC34A;
+}
+
+.cool-notification.alert {
+    background: #ffdb5b;
+}
+
+.cool-notification.info {
+    background: #03A9F4;
+}
+
+.cool-notification.warn {
+    background: #ffdb5b;
+}
+
+.cool-notification.warn div .cool-title,
+.cool-notification.warn div .cool-content,
+.cool-notification.warn div .cool-html {
+    color: #444;
 }
