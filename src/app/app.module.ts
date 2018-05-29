@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { MmiNotifrModule } from './modules/mmi-notifr/mmi-notifr.module';
+import { CoolNotifierModule } from './modules/cool-notifier/cool-notifier.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { MmiNotifrModule } from './modules/mmi-notifr/mmi-notifr.module';
   ],
   imports: [
     BrowserModule,
-    MmiNotifrModule
+    CoolNotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]
