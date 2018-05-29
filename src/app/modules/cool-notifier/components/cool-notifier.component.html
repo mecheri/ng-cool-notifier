@@ -1,20 +1,26 @@
-<div class="cool-notificaion-wrapper" [ngClass]="notif.opts.position">
-    <div class="cool-notification" (click)="onClick($event)" [@enterLeave]="notif.opts.animate" [ngClass]="{
-        'alert': notif.type === 'alert',
-        'error': notif.type === 'error',
-        'warn': notif.type === 'warn',
-        'success': notif.type === 'success',
-        'info': notif.type === 'info',
-        'bare': notif.type === 'bare',
-        'rtl-mode': notif.opts.rtl,
-        'has-icon': notif.icon !== 'bare'
-    }">
 
-        <div class="cool-title" [innerHTML]="notif.title"></div>
+    <div  class="cool-notification-wrapper" [ngClass]="currNtf.opts.position">
+       <div *ngFor="let ntf of notifications; let i = index"
+            class="cool-notification"
+            [@inOut]="ntf.opts.animate"
+            [ngClass]="{
+               'alert': ntf.type === 'alert',
+               'error': ntf.type === 'error',
+               'warn': ntf.type === 'warn',
+               'success': ntf.type === 'success',
+               'info': ntf.type === 'info',
+               'bare': ntf.type === 'bare',
+               'rtl-mode': ntf.opts.rtl,
+               'has-icon': ntf.icon !== 'bare'
+           }"
+           (click)="onClick($event)">
 
-        <div class="cool-content" [innerHTML]="notif.content"></div>
+           <div class="cool-title" [innerHTML]="ntf.title"></div>
 
-        <div class="icon" *ngIf="notif.icon !== 'bare'" [innerHTML]="safeSvg"></div>
+           <div class="cool-content" [innerHTML]="ntf.content"></div>
 
-    </div>
-</div>
+           <div class="icon" *ngIf="ntf.icon !== 'bare'" [innerHTML]="ntf.safeSvg"></div>
+
+       </div>
+   </div>
+

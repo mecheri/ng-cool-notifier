@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private service: CoolNotifierService) { }
 
   error() {
-    this.service.error('test', 'test');
+    this.service.error('test', 'test', { position: ['top', 'right'] });
   }
 
   success() {

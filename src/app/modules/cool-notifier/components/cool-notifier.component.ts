@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, AfterViewInit, Input } from '@angular/core';
+import { Component, OnDestroy, OnInit, Input } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Subscription } from 'rxjs/internal/Subscription';
@@ -16,7 +16,7 @@ import { IOptions } from '../interfaces/options';
   templateUrl: './cool-notifier.component.html',
   styleUrls: ['./cool-notifier.component.css'],
   animations: [
-    trigger('enterLeave', [
+    trigger('inOut', [
 
       // Fade
       state('fade', style({opacity: 1})),
@@ -107,7 +107,8 @@ import { IOptions } from '../interfaces/options';
 export class CoolNotifierComponent implements OnInit {
 
   private notifrChanged: Subscription;
-  public notif: INotification = DEFAULT_NOTIFICATION;
+  private notifications: INotification[] = [];
+  public currNtf: INotification = DEFAULT_NOTIFICATION;
   public safeSvg: SafeHtml;
 
   // TODO: see if we can use it
@@ -120,9 +121,10 @@ export class CoolNotifierComponent implements OnInit {
 
   ngOnInit() {
     this.notifrChanged = this.service.notifier$
-      .subscribe((notif: INotification) => {
-        this.notif = notif;
-        this.safeSvg = this.domSanitizer.bypassSecurityTrustHtml(this.notif.icon);
+      .subscribe((ntf: INotification) => {
+        this.currNtf = ntf;
+        ntf.safeSvg = this.domSanitizer.bypassSecurityTrustHtml(ntf.icon)
+        this.notifications.push(ntf);
       });
   }
 
