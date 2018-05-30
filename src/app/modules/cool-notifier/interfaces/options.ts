@@ -1,9 +1,11 @@
 import { Animate } from "../constants";
 
 export interface IOptions {
-  position?: string[];
-  clickToClose?: boolean;
-  animate?: Animate;
   timeOut?: number;
+  position?: string[];
+  animate?: Animate;
+  customClass?: string;
+  clickToClose?: boolean;
+  withIcon?: boolean;
   rtl?: boolean;
 }

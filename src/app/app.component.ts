@@ -12,11 +12,11 @@ export class AppComponent {
   constructor(private service: CoolNotifierService) { }
 
   error() {
-    this.service.error('test', 'test', { position: ['top', 'right'] });
+    this.service.error('test', 'test');
   }
 
   success() {
-    this.service.success('test', 'test');
+    this.service.success('test', 'test', { timeOut: 3000, clickToClose: false, withIcon: false });
   }
 
   info() {
@@ -24,14 +24,10 @@ export class AppComponent {
   }
 
   alert() {
-    this.service.success('test', 'test');
+    this.service.alert('test', 'test');
   }
 
   warn() {
     this.service.warn('test', 'test');
-  }
-
-  bare() {
-    this.service.bare('test', 'test');
   }
 }

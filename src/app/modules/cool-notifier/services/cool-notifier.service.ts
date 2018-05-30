@@ -30,31 +30,41 @@ export class CoolNotifierService {
 
   build(notification: INotification, opts?: IOptions) {
     notification.id = Math.random().toString(36).substring(3);
-    notification.opts = opts ? opts : this.defOpts;
+    opts.animate = opts.animate !== undefined ? opts.animate : this.defOpts.animate;
+    opts.clickToClose = opts.clickToClose !== undefined ? opts.clickToClose : this.defOpts.clickToClose;
+    opts.customClass = opts.customClass !== undefined ? opts.customClass : this.defOpts.customClass;
+    opts.position = opts.position !== undefined ? opts.position : this.defOpts.position;
+    opts.rtl = opts.rtl !== undefined ? opts.rtl : this.defOpts.rtl;
+    opts.timeOut = opts.timeOut !== undefined ? opts.timeOut : this.defOpts.timeOut;
+    opts.withIcon = opts.withIcon !== undefined ? opts.withIcon : this.defOpts.withIcon;
+    notification.opts = opts;
     this.subject.next(<INotification>notification);
   }
 
-  success(title: string = '', content: string = '', opts?: IOptions) {
+  remove(notification: INotification) {
+    if (notification.toDelete) {
+      this.subject.next(notification);
+    }
+  }
+
+  success(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.success, icon: this.icons.success }, opts);
   }
 
-  error(title: string = '', content: string = '', opts?: IOptions) {
+  error(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.error, icon: this.icons.error }, opts);
   }
 
-  warn(title: string = '', content: string = '', opts?: IOptions) {
+  warn(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.warn, icon: this.icons.warn }, opts);
   }
 
-  alert(title: string = '', content: string = '', opts?: IOptions) {
+  alert(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.alert, icon: this.icons.alert }, opts);
   }
 
-  info(title: string = '', content: string = '', opts?: IOptions) {
+  info(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.info, icon: this.icons.info }, opts);
   }
 
-  bare(title: any = '', content: any = '', opts?: IOptions) {
-    this.build({title: title, content: content, type: Type.bare, icon: this.icons.bare }, opts);
-  }
 }

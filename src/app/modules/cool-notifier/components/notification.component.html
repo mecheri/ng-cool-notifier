@@ -1,0 +1,19 @@
+<div class="cool-notification"
+    [@inOut]="ntf.state"
+    [class]="ntf.opts.customClass"
+    [ngClass]="{
+        'alert': ntf.type === 'alert',
+        'error': ntf.type === 'error',
+        'warn': ntf.type === 'warn',
+        'success': ntf.type === 'success',
+        'info': ntf.type === 'info',
+        'rtl-mode': ntf.opts.rtl,
+        'has-icon': ntf.opts.withIcon
+    }"
+    (click)="onClick()">
+
+    <div class="cool-title" [innerHTML]="ntf.title"></div>
+    <div class="cool-content" [innerHTML]="ntf.content"></div>
+    <div class="icon" *ngIf="ntf.opts.withIcon" [innerHTML]="safeSvg"></div>
+
+</div>

@@ -1,26 +1,3 @@
-
-    <div  class="cool-notification-wrapper" [ngClass]="currNtf.opts.position">
-       <div *ngFor="let ntf of notifications; let i = index"
-            class="cool-notification"
-            [@inOut]="ntf.opts.animate"
-            [ngClass]="{
-               'alert': ntf.type === 'alert',
-               'error': ntf.type === 'error',
-               'warn': ntf.type === 'warn',
-               'success': ntf.type === 'success',
-               'info': ntf.type === 'info',
-               'bare': ntf.type === 'bare',
-               'rtl-mode': ntf.opts.rtl,
-               'has-icon': ntf.icon !== 'bare'
-           }"
-           (click)="onClick($event)">
-
-           <div class="cool-title" [innerHTML]="ntf.title"></div>
-
-           <div class="cool-content" [innerHTML]="ntf.content"></div>
-
-           <div class="icon" *ngIf="ntf.icon !== 'bare'" [innerHTML]="ntf.safeSvg"></div>
-
-       </div>
-   </div>
-
+<div class="cool-notification-wrapper" [ngClass]="currNtf.opts.position">
+    <notification *ngFor="let ntf of notifications; let i = index" [notification]="ntf"></notification>
+</div>

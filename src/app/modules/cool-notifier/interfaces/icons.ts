@@ -4,5 +4,4 @@ export interface IIcons {
   warn: string;
   alert: string;
   info: string;
-  bare: string;
 }

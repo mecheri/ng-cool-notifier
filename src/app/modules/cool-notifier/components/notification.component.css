@@ -1,0 +1,92 @@
+
+.cool-notification {
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+    min-height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cool-notification .cool-title,
+.cool-notification .cool-content,
+.cool-notification .cool-html {
+    margin: 0;
+}
+
+.cool-notification .cool-title {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.cool-notification .cool-content {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cool-notification.has-icon .cool-title,
+.cool-notification.has-icon .cool-content,
+.cool-notification.has-icon .cool-html {
+    padding: 0 50px 0 0;
+}
+
+.cool-notification .icon {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.cool-notification .icon.icon-hover:hover {
+    opacity: 0.5;
+}
+
+.cool-notification.rtl-mode.has-icon .cool-title,
+.cool-notification.rtl-mode.has-icon .cool-content,
+.cool-notification.rtl-mode.has-icon .cool-html {
+    padding: 0 0 0 50px;
+}
+
+.cool-notification.rtl-mode {
+    direction: rtl;
+}
+
+.cool-notification.rtl-mode .cool-content {
+    padding: 0 0 0 50px;
+}
+
+.cool-notification.rtl-mode svg {
+    left: 0;
+    right: auto;
+}
+
+.cool-notification.success {
+    background: #8BC34A;
+}
+
+.cool-notification.error {
+    background: #F44336;
+}
+
+.cool-notification.alert {
+    background: #ffdb5b;
+    color: #444;
+}
+
+.cool-notification.warn {
+    background: #ffdb5b;
+    color: #444;
+}
+
+.cool-notification.info {
+    background: #03A9F4;
+}
