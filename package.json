@@ -1,6 +1,6 @@
 {
     "name": "ng-cool-notifier",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "author": {
         "name": "Mehdi Mecheri",
         "email": "mecherimehdi88@gmail.com"
@@ -11,9 +11,9 @@
         "Notifications"
     ],
     "bugs": {
-        "url": "https://github.com/mecheri/cool-notifier/issues"
+        "url": "https://github.com/mecheri/ng-cool-notifier/issues"
     },
-    "homepage": "https://github.com/mecheri/cool-notifier",
+    "homepage": "https://github.com/mecheri/ng-cool-notifier",
     "license": "MIT",
     "scripts": {
         "ng": "ng",
