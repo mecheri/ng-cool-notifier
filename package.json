@@ -23,8 +23,8 @@
         "bump:minor": "bump --minor --lock --tag --push --all",
         "bump:major": "bump --major --lock --tag --push --all",
         "bump:prerelease": "bump --prerelease --lock --push --all",
-        "packagr": "ng-packagr -p ng-package.json",
-        "publish": "npm publish dist",
+        "pack": "ng-packagr -p ng-package.json",
+        "publish": "npm run pack && npm publish dist",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
