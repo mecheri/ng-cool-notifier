@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private service: CoolNotifierService) { }
 
   error() {
-    this.service.error('test', 'test');
+    this.service.error('test', 'testdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd');
   }
 
   success() {
@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   info() {
-    this.service.info('test', 'test');
+    this.service.info('test', 'testq qdqsdqsd');
   }
 
   alert() {

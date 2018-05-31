@@ -12,6 +12,7 @@
     transition: all 0.5s;
     min-height: 70px;
     font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
 }
 
 .cool-notification .cool-title,

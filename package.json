@@ -1,15 +1,34 @@
 {
     "name": "ng-cool-notifier",
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "author": {
+        "name": "Mehdi Mecheri",
+        "email": "mecherimehdi88@gmail.com"
+    },
+    "keywords": [
+        "Angular",
+        "Library",
+        "Notifications"
+    ],
+    "bugs": {
+        "url": "https://github.com/mecheri/cool-notifier/issues"
+    },
+    "homepage": "https://github.com/mecheri/cool-notifier",
     "license": "MIT",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build",
+        "bump:patch": "bump --patch --lock --tag --push --all",
+        "bump:minor": "bump --minor --lock --tag --push --all",
+        "bump:major": "bump --major --lock --tag --push --all",
+        "bump:prerelease": "bump --prerelease --lock --push --all",
+        "packagr": "ng-packagr -p ng-package.json",
+        "publish": "npm publish dist",
+        "version": "npm run packagr && npm run publish",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e",
-        "packagr": "ng-packagr -p ng-package.json"
+        "e2e": "ng e2e"
     },
     "private": false,
     "dependencies": {
@@ -46,6 +65,7 @@
         "protractor": "~5.3.0",
         "ts-node": "~5.0.1",
         "tslint": "~5.9.1",
-        "typescript": "~2.7.2"
+        "typescript": "~2.7.2",
+        "version-bump-prompt": "^4.1.0"
     }
 }

@@ -18,7 +18,7 @@ import { IOptions } from '../interfaces/options';
 export class CoolNotifierComponent implements OnInit {
 
   private subscription: Subscription;
-  private notifications: INotification[] = [];
+  public notifications: INotification[] = [];
   public currNtf: INotification = DEFAULT_NOTIFICATION;
 
   constructor(

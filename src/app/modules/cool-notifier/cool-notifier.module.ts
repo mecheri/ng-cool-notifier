@@ -16,7 +16,7 @@ import { NotificationComponent } from './components/notification.component';
     NotificationComponent
   ],
   exports: [
-    CoolNotifierComponent
+    CoolNotifierComponent,
   ],
   providers: [
     CoolNotifierService

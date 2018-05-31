@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Subject } from 'rxjs/internal/Subject';
 
 import { IIcons } from '../interfaces/icons';
-import { DEFAULT_ICONS, DEFAULT_NOTIFICATION, DEFAULT_OPTIONS } from 'src/app/modules/cool-notifier/constants';
+import { DEFAULT_ICONS, DEFAULT_NOTIFICATION, DEFAULT_OPTIONS } from '../constants';
 
 import { INotification } from '../interfaces/notification';
 import { IOptions } from '../interfaces/options';
