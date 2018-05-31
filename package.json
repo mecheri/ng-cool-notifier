@@ -1,6 +1,6 @@
 {
     "name": "ng-cool-notifier",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "author": {
         "name": "Mehdi Mecheri",
         "email": "mecherimehdi88@gmail.com"
@@ -25,7 +25,6 @@
         "bump:prerelease": "bump --prerelease --lock --push --all",
         "packagr": "ng-packagr -p ng-package.json",
         "publish": "npm publish dist",
-        "version": "npm run packagr && npm run publish",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
