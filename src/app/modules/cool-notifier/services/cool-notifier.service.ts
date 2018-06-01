@@ -14,7 +14,6 @@ enum Type {
   alert = 'alert',
   warn = 'warn',
   info = 'info',
-  bare = 'bare'
 }
 
 @Injectable()
