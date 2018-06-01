@@ -1,7 +1,8 @@
 # ng-cool-notifier
 
-An easy notifications library for Angular
 [![](./src/assets/images/demo.gif)]()
+
+> An easy notifications library for Angular
 
 ## Table of Contents
 
