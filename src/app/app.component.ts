@@ -12,22 +12,39 @@ export class AppComponent {
   constructor(private service: CoolNotifierService) { }
 
   error() {
-    this.service.error('test', 'testdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd');
+    this.service.error(
+      'Oops! Something went wrong!',
+      `The application has encountered an unknown error.<br>
+       Help us improve your experience by sending an error report`,
+    );
   }
 
   success() {
-    this.service.success('test', 'test', { timeOut: 3000, clickToClose: false, withIcon: false });
+    this.service.success(
+      'Success',
+      'Record has been successfully added',
+      { timeOut: 5000, clickToClose: false, withIcon: true });
   }
 
   info() {
-    this.service.info('test', 'testq qdqsdqsd');
+    this.service.info(
+      'Info',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod id est sit amet maximus',
+      { timeOut: 5000, clickToClose: false, withIcon: true });
   }
 
   alert() {
-    this.service.alert('test', 'test');
+    this.service.alert(
+      'Alert',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod id est sit amet maximus',
+      { timeOut: 5000, clickToClose: false, withIcon: true });
   }
 
   warn() {
-    this.service.warn('test', 'test');
+    this.service.warn(
+      'Warning',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod id est sit amet maximus',
+      { timeOut: 5000, clickToClose: false, withIcon: true });
   }
 }
+

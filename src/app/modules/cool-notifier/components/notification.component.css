@@ -1,4 +1,3 @@
-
 .cool-notification {
     width: 100%;
     padding: 10px 20px;
@@ -13,6 +12,7 @@
     min-height: 70px;
     font-family: Arial, Helvetica, sans-serif;
     word-wrap: break-word;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cool-notification .cool-title,
@@ -27,7 +27,7 @@
 }
 
 .cool-notification .cool-content {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
 }
 
@@ -79,8 +79,7 @@
 }
 
 .cool-notification.alert {
-    background: #ffdb5b;
-    color: #444;
+    background: #444;
 }
 
 .cool-notification.warn {
