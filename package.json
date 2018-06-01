@@ -6,11 +6,13 @@
         "email": "mecherimehdi88@gmail.com"
     },
     "keywords": [
-        "Angular",
-        "Notifications",
-        "Toast",
-        "popup",
-        "Library"
+        "typescript",
+        "angular",
+        "ngx",
+        "notification",
+        "toast",
+        "alert",
+        "popup"
     ],
     "bugs": {
         "url": "https://github.com/mecheri/ng-cool-notifier/issues"

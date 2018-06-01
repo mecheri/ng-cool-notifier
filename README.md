@@ -8,6 +8,7 @@
 
   - [Example](#example)
   - [Install](#install)
+  - [Setup](#setup)
   - [Usage](#setup)
     - [Creating Notifications](#crating-notifications)
     - [Options](#options)
@@ -15,6 +16,14 @@
 ## Example
 
 Soon
+
+## Install
+
+Install the library
+
+```sh
+npm install --save ng-cool-notifier
+```
 
 ## Setup
 
