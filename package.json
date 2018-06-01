@@ -1,14 +1,16 @@
 {
     "name": "ng-cool-notifier",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": {
         "name": "Mehdi Mecheri",
         "email": "mecherimehdi88@gmail.com"
     },
     "keywords": [
         "Angular",
-        "Library",
-        "Notifications"
+        "Notifications",
+        "Toast",
+        "popup",
+        "Library"
     ],
     "bugs": {
         "url": "https://github.com/mecheri/ng-cool-notifier/issues"
