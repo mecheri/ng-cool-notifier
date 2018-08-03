@@ -47,24 +47,23 @@ export class CoolNotifierService {
     }
   }
 
-  success(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
+  success(title: string = '', content: any = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.success, icon: this.icons.success }, opts);
   }
 
-  error(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
+  error(title: string = '', content: any = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.error, icon: this.icons.error }, opts);
   }
 
-  warn(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
+  warn(title: string = '', content: any = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.warn, icon: this.icons.warn }, opts);
   }
 
-  alert(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
+  alert(title: string = '', content: any = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.alert, icon: this.icons.alert }, opts);
   }
 
-  info(title: string = '', content: string = '', opts: IOptions = DEFAULT_OPTIONS) {
+  info(title: string = '', content: any = '', opts: IOptions = DEFAULT_OPTIONS) {
     this.build(<INotification>{ title: title, content: content, type: Type.info, icon: this.icons.info }, opts);
   }
-
 }
