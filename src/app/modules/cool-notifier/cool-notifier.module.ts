@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoolNotifierService } from './services/cool-notifier.service';
 import { CoolNotifierComponent } from './components/cool-notifier.component';
@@ -17,7 +17,7 @@ export * from './constants';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule
+    // BrowserAnimationsModule
   ],
   declarations: [
     CoolNotifierComponent,
