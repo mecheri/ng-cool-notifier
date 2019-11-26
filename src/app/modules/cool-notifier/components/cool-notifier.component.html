@@ -1,3 +1,6 @@
 <div class="cool-notification-wrapper" [ngClass]="currNtf.opts.position">
-    <notification *ngFor="let ntf of notifications; let i = index" [notification]="ntf"></notification>
+  <notification
+    *ngFor="let ntf of notifications; let i = index"
+    [notification]="ntf"
+  ></notification>
 </div>
